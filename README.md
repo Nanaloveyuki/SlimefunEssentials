@@ -1,9 +1,13 @@
-### SlimefunEssentials
+## SlimefunEssentials
 Slimefun Essentials is a minecraft mod dedicated to add support for Slimefun4 items and mechanics to other client sided mods.
+
+[简体中文](https://github.com/JustAHuman-xD/SlimefunEssentials/blob/1.20.4/README.zh-CN.md)
+
+---
 
 ### What does it do:
 - Adds Support for Slimefun Recipes to EMI, REI, JEI
-- Adds Support for Custom Textures for Placed Slimefun Blocks (Requires More Block Predicates on the Client and Requires Slimefun Server Essentials on the Server)
+- Adds Support for Custom Textures for Placed Slimefun Blocks (Requires More Block Predicates on the Client and Requires [Slimefun Server Essentials](https://github.com/JustAHuman-xD/SlimefunServerEssentials/releases) (Plugin) on the Server)
 - Adds Support for Jade Tooltips for Placed Slimefun Blocks (Requires Jade on the Client and Requires Slimefun Server Essentials on the Server)
 - More Coming Soon™
 
