@@ -1,0 +1,52 @@
+{
+    "slimefun_essentials.title": "Slimefun Essentials (SFE)",
+  
+    "slimefun_essentials.key_bind.open_config":"打開配寘",
+  
+    "slimefun_essentials.config.category.general":"常規",
+    "slimefun_essentials.config.option.block_features":"啟用添加粘液科技塊功能",
+    "slimefun_essentials.config.option.block_features.tooltip":"->啟用自定義塊紋理(需要MBP)\n->啟用玉 (Jade) 相容性(需要Jade)\n*需要在伺服器上安裝SlimefunServerEssentials*",
+    "slimefun_essentials.config.option.custom_guide":"啟用自定義指南",
+    "slimefun_essentials.config.option.custom_guide.tooltip":"->啟用自定指南(需要Patchouli 帕秋莉手冊)",
+    "slimefun_essentials.config.option.recipe_features":"啟用配方功能",
+    "slimefun_essentials.config.option.recipe_features.tooltip":"->啟用Jei、Rei和Emi的配方(需要Jei、Rei和Emi)",
+    "slimefun_essentials.config.option.addons":"已啟用slimefun附加組件:",
+    "slimefun_essentials.config.option.addons.tittip":"添加或删除您想要支持的slimefun載入項！",
+    
+    "slimefun_essentials.config.category.visual":"顯示",
+    "slimefun_essentials.config.option.replace_item_identifiers":"替換項目ID",
+    "slimefun_essentials.config.option.replace_item_identifiers.tittip":"例如\"minecraft:fornic\"->\"slimefun:pure_ore_cluster\"",
+    "slimefun_essentials.config.option.hide_background_tooltips":"隱藏背景工具提示",
+    "slimefun_essentials.config.option.hide_background_tooltips.tittip":"隱藏僅作為背景/填充物的項目的工具提示,例如slimefun指南中的灰色窗格。",
+    
+    "slimefun_essentials.config.category.server":"伺服器",
+    "slimefun_essentials.config.option.require_server_connection":"需要伺服器連接",
+    "slimefun_essentials.config.option.require_server_connection.tittip":"如果啟用,SFE將僅在伺服器上運行。\n可能需要您離開並重新加入世界/伺服器才能生效。",
+    "slimefun_essentials.config.option.enable_server_whitelist":"啟用伺服器白名單",
+    "slimefun_essentials.config.option.enable_server_whitelist.tittip":"Slimefun essentials應該只在列入白名單的伺服器上運行嗎？",
+    "slimefun_essentials.config.option.server_whitelist":"伺服器白名單:",
+    "slimefun_essentials.config.option.server_whitelist.tittip":"添加或删除要列入白名單的伺服器名稱！\n(編輯伺服器荧幕中還有一個按鈕)",
+    
+    "slimefun_essentials.config.option.auto_toggle_addons":"啟用自動載入項",
+    "slimefun_essentials.config.option.auto_toggle_addons.tittip":"SFE是否應根據伺服器上安裝的挿件自動啟用或禁用挿件支持？\n*要求在伺服器上安裝SlimefunServerEssentials*",
+    "slimefun_essentials.config.option.auto_manage_items":"啟用自動專案管理",
+    "slimefun_essentials.config.option.auto_manage_items.tooltip":"SFE是否應根據伺服器上的配寘自動禁用項目？\n*要求在伺服器上安裝SlimefunServerEssentials*",
+    
+    "slimefun_essentials.server_menu.add_whitelist":"[SFE] 白名單",
+    "slimefun_essentials.server_menu.add_whitelist.tittip":"將伺服器添加到白名單",
+    "slimefun_essentials.server_menu.remove_whitelist":"[SFE] 取消白名單",
+    "slimefun_essentials.server_menu.remove_whitelist.tittip":"從白名單中删除伺服器",
+    
+    "slimefun_essentials.precipes.category.slimefun":"%s",
+    "slimefun_essentials.precipes.time":"%s 秒(%s 刻)",
+    "slimefun_essentials.precipes.energy.use":"已使用 %s J",
+    "slimefun_essentials.precipes.energy.genergy":"產生 %s J",
+    "slimefun_essentials.precipes.label.day":"此塊必須暴露在陽光下才能處理此配方！",
+    "slimefun_essentials.precipes.label.night":"這個區塊必須在夜晚才能處理這個配方！",
+    "slimefun_essentials.precipes.detail.time":"-需要 %s 秒",
+    "slimefun_essentials.precipes.detail.energ.use":"-使用 %s J",
+    "slimefun_essentials.precipes.detail.energ.generate":"-產生 %s J",
+    
+    "slimefun_essentials.guide.name":"slimefun指南",
+    "slimefun_essentials.guide.landing_text":"歡迎來到slimefun的世界"
+}

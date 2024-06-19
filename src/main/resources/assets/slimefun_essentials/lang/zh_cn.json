@@ -1,21 +1,53 @@
 {
-  "slimefun_essentials.title": "Slimefun Essentials",
+  "slimefun_essentials.title": "Slimefun Essentials(SFE)",
+  
+  "slimefun_essentials.key_bind.open_config": "打开配置",
 
-  "slimefun_essentials.key_bind.open_config": "打开设置",
-
+  
+  "slimefun_essentials.config.category.general": "常规",
   "slimefun_essentials.config.option.block_features": "添加粘液科技方块材质",
-  "slimefun_essentials.config.option.block_features.tooltip": "-> 开启 MBP 拓展\n-> 开启玉（Jade）拓展",
-  "slimefun_essentials.config.option.recipe_features": "添加粘液科技配方",
-  "slimefun_essentials.config.option.recipe_features.tooltip": "-> 开启玉（Jade）拓展\n-> 开启 REI 拓展\n-> 开启 EMI 拓展",
-  "slimefun_essentials.config.option.auto_toggle_addons": "自动添加附属插件",
-  "slimefun_essentials.config.option.auto_toggle_addons.tooltip": "是否自动启用/禁用附属插件的支持？",
-  "slimefun_essentials.config.option.addons": "启用的粘液科技附属插件支持：",
-  "slimefun_essentials.config.option.addons.tooltip": "添加/移除你想要支持的附属插件",
+  "slimefun_essentials.config.option.block_features.tooltip": "->启用自定义方块纹理(需要MBP)\n->启用玉扩展(需要Jade)\n*需要在服务器上安装SlimefunServerEssentials*",
+  "slimefun_essentials.config.option.custom_guide": "启用自定义指南",
+  "slimefun_essentials.config.option.custom_guide.tooltip": "->启用自定义指南(需要Patchouli (帕秋莉手册))",
+  "slimefun_essentials.config.option.recipe_features": "启用配方功能",
+  "slimefun_essentials.config.option.recipe_features.tooltip": "->启用JEI、REI和EMI支持",
+  "slimefun_essentials.config.option.addons": "Slimefun附加组件: ",
+  "slimefun_essentials.config.option.addons.tittip": "添加或删除您想要支持的Slimefun加载项",
+  
+  "slimefun_essentials.config.category.visual": "显示",
+  "slimefun_essentials.config.option.replace_item_identifiers": "替换项目ID",
+  "slimefun_essentials.config.option.replace_item_identifiers.tittip": "例如\"minecraft:fornic\"->\"slimefun:pure_ore_cluster\"",
+  "slimefun_essentials.config.option.hide_background_tooltips": "隐藏背景工具提示",
+  "slimefun_essentials.config.option.hide_background_tooltips.tittip": "隐藏仅作为背景/填充物的项目的工具提示,例如slimefun指南中的灰色窗格.",
 
-  "slimefun_essentials.recipes.category.slimefun" : "%s",
-  "slimefun_essentials.recipes.time": "%s 秒 (%s 刻)",
-  "slimefun_essentials.recipes.energy.use": "使用 %sJ",
-  "slimefun_essentials.recipes.energy.generate": "生成 %sJ",
-  "slimefun_essentials.recipes.label.day": "您必须在白天才能用此方块合成该物品！",
-  "slimefun_essentials.recipes.label.night": "您必须在夜晚才能用此方块合成该物品！"
+  "slimefun_essentials.config.category.server": "服务器",
+  "slimefun_essentials.config.option.require_server_connection": "需要服务器连接",
+  "slimefun_essentials.config.option.require_server_connection.tittip": "如果启用,SFE将仅在服务器上运行.\n可能需要您离开并重新加入世界/服务器才能生效.",
+  "slimefun_essentials.config.option.enable_server_whitelist": "启用服务器白名单",
+  "slimefun_essentials.config.option.enable_server_whitelist.tittip": "slimefun essentials应该只在列入白名单的服务器上运行吗?",
+  "slimefun_essentials.config.option.server_whitelist": "服务器白名单: ",
+  "slimefun_essentials.config.option.server_whitelist.tittip": "添加或删除要列入白名单的服务器名称！\n(编辑服务器屏幕中还有一个按钮)",
+
+  "slimefun_essentials.config.option.auto_toggle_addons": "启用自动加载项",
+  "slimefun_essentials.config.option.auto_toggle_addons.tittip": "SFE是否应根据服务器上安装的插件自动启用或禁用插件支持?\n*要求在服务器上安装SlimefunServerEssentials*",
+  "slimefun_essentials.config.option.auto_manage_items": "启用自动项目管理",
+  "slimefun_essentials.config.option.auto_manage_items.tooltip": "SFE是否应根据服务器上的配置自动禁用项目?\n*要求在服务器上安装SlimefunServerEssentials*",
+  
+  "slimefun_essentials.server_menu.add_whitelist": "[SFE] 白名单",
+  "slimefun_essentials.server_menu.add_whitelist.tittip": "将服务器添加到白名单",
+  "slimefun_essentials.server_menu.remove_whitelist": "[SFE] 取消白名单",
+  "slimefun_essentials.server_menu.remove_whitelist.tittip": "从白名单中删除服务器",
+
+  "slimefun_essentials.precipes.category.slimefun": "%s",
+  "slimefun_essentials.precipes.time": "%s 秒 (%s 刻)",
+  "slimefun_essentials.precipes.energy.use": "已使用%s J",
+  "slimefun_essentials.precipes.energy.genergy": "生成 %s J",
+  "slimefun_essentials.precipes.label.day": "此方块必须暴露在阳光下才能处理此配方！",
+  "slimefun_essentials.precipes.label.night": "这个区块必须在夜晚才能处理这个配方！",
+  "slimefun_essentials.precipes.detail.time": "-需要 %s 秒",
+  "slimefun_essentials.precipes.detail.energ.use": "-使用 %s J",
+  "slimefun_essentials.precipes.detail.energ.generate": "-产生 %s J",
+  
+  "slimefun_essentials.guide.name": "slimefun指南",
+  "slimefun_essentials.guide.landing_text": "欢迎来到slimefun的世界"
 }
