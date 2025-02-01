@@ -2,6 +2,7 @@ package me.justahuman.slimefun_essentials.compat.rei;
 
 import me.justahuman.slimefun_essentials.client.DrawMode;
 import me.justahuman.slimefun_essentials.client.ResourceLoader;
+import me.justahuman.slimefun_essentials.client.SlimefunItemGroup;
 import me.justahuman.slimefun_essentials.client.SlimefunRecipeCategory;
 import me.justahuman.slimefun_essentials.client.SlimefunItemStack;
 import me.justahuman.slimefun_essentials.client.SlimefunLabel;
@@ -31,14 +32,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.Generic3x3ContainerScreenHandler;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ReiIntegration implements REIClientPlugin {
     public static final ReiRecipeInterpreter RECIPE_INTERPRETER = new ReiRecipeInterpreter();
     private static final Map<SlimefunRecipeCategory, DisplayCategory<?>> CATEGORIES = new HashMap<>();
-    private static EntryRegistry entryRegistry = null;
-    private static CategoryRegistry categoryRegistry = null;
-    private static DisplayRegistry displayRegistry = null;
 
     @Override
     public double getPriority() {
@@ -60,7 +59,9 @@ public class ReiIntegration implements REIClientPlugin {
             return;
         }
 
-        entryRegistry = registry;
+        for (SlimefunItemStack slimefunItemStack : SlimefunItemGroup.sort(List.copyOf(ResourceLoader.getSlimefunItems().values()))) {
+            registry.addEntry(EntryStacks.of(slimefunItemStack.itemStack()));
+        }
     }
     
     @Override
@@ -69,7 +70,14 @@ public class ReiIntegration implements REIClientPlugin {
             return;
         }
 
-        categoryRegistry = registry;
+        CATEGORIES.clear();
+        for (SlimefunRecipeCategory slimefunRecipeCategory : SlimefunRecipeCategory.getRecipeCategories().values()) {
+            final ItemStack icon = slimefunRecipeCategory.itemStack();
+            final DisplayCategory<?> displayCategory = new SlimefunReiCategory<>(slimefunRecipeCategory, icon);
+            registry.add(displayCategory);
+            registry.addWorkstations(displayCategory.getCategoryIdentifier(), EntryStacks.of(icon));
+            CATEGORIES.put(slimefunRecipeCategory, displayCategory);
+        }
     }
     
     @Override
@@ -78,7 +86,11 @@ public class ReiIntegration implements REIClientPlugin {
             return;
         }
 
-        displayRegistry = registry;
+        for (SlimefunRecipeCategory slimefunRecipeCategory : SlimefunRecipeCategory.getRecipeCategories().values()) {
+            for (SlimefunRecipe slimefunRecipe : slimefunRecipeCategory.childRecipes()) {
+                registry.add(getDisplay(slimefunRecipeCategory, slimefunRecipe));
+            }
+        }
     }
 
     @Override
@@ -90,31 +102,6 @@ public class ReiIntegration implements REIClientPlugin {
                         CATEGORIES.get(category).getCategoryIdentifier(),
                         new SimpleTransferHandler.IntRange(0, 8)
                 ));
-            }
-        }
-    }
-
-    public static void load() {
-        if (entryRegistry == null || categoryRegistry == null || displayRegistry == null) {
-            return;
-        }
-
-        for (SlimefunItemStack slimefunItemStack : ResourceLoader.getSlimefunItems().values()) {
-            entryRegistry.addEntry(EntryStacks.of(slimefunItemStack.itemStack()));
-        }
-
-        CATEGORIES.clear();
-        for (SlimefunRecipeCategory slimefunRecipeCategory : SlimefunRecipeCategory.getRecipeCategories().values()) {
-            final ItemStack icon = slimefunRecipeCategory.itemStack();
-            final DisplayCategory<?> displayCategory = new SlimefunReiCategory<>(slimefunRecipeCategory, icon);
-            categoryRegistry.add(displayCategory);
-            categoryRegistry.addWorkstations(displayCategory.getCategoryIdentifier(), EntryStacks.of(icon));
-            CATEGORIES.put(slimefunRecipeCategory, displayCategory);
-        }
-
-        for (SlimefunRecipeCategory slimefunRecipeCategory : SlimefunRecipeCategory.getRecipeCategories().values()) {
-            for (SlimefunRecipe slimefunRecipe : slimefunRecipeCategory.childRecipes()) {
-                displayRegistry.add(getDisplay(slimefunRecipeCategory, slimefunRecipe));
             }
         }
     }
